@@ -3,7 +3,7 @@
 A clean, responsive, and elegant landing page designed for a local boutique cafe. This project focuses on a modern UI, mobile-first design, and seamless user experience.
 
 ## 📸 Preview
-![Cozy Cafe Website](./screenshot.png)
+(./cafe.png)
 
 ## 🚀 Live Demo
 (https://illustrious-banoffee-2e2da3.netlify.app/)
