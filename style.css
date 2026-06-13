@@ -1,0 +1,198 @@
+/* Base */
+body { 
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #333;
+    color: white;
+    position: relative;
+}
+
+/* Logo */
+nav h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    white-space: nowrap;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+}
+
+
+/* Navigation links (desktop) */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+}
+
+/* Side menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: white;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    z-index: 2000; 
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+/* Links inside the side menu */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem; 
+    display: block;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Sections */
+section { 
+    padding: 50px 5%;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero { 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url(cafe1.avif);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 170px 5%; 
+    min-height: 20vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero button {
+    padding: 10px 25px;
+    background-color: #d4a373;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+#hero button:hover {
+    background-color: #bc8a5f;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: 20px;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d4a373;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* hide main links on small screens */
+    }
+    .menu-toggle {
+        display: block; /* show hamburger button */
+    }
+}
